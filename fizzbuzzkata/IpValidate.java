@@ -8,7 +8,7 @@ public class IpValidate {
 		{
 			return true;
 		}
-		return true;
+		return false;
 	}
 	
 	private boolean hasThreeDots(String ipString) {
