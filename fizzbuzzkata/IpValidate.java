@@ -1,11 +1,11 @@
 package fizzbuzzkata;
 
 public class IpValidate {
-	public boolean ValidateIpv4Address(String string) {
-		if(string == "")
+	public boolean ValidateIpv4Address(String ipString) {
+		if(ipString == "")
 		{
-			return false;
+			return true;
 		}
-		return true;
+		return false;
 	}
 }
