@@ -9,7 +9,7 @@ public class IpValidate {
 			numbersInRange(ipString)) {
 			return true;
 		}
-		return true;
+		return false;
 	}
 	
 	private boolean numbersInRange(String ipString) {
