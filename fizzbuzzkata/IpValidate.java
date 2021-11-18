@@ -2,10 +2,14 @@ package fizzbuzzkata;
 
 public class IpValidate {
 	public boolean ValidateIpv4Address(String ipString) {
-		if(ipString == "")
+		if(hasThreeDots(ipString))
 		{
 			return true;
 		}
 		return false;
+	}
+	
+	private boolean hasThreeDots(String ipString) {
+		return ipString.chars().filter(c->c=='.').count()==3;
 	}
 }
