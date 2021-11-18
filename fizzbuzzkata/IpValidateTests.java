@@ -9,7 +9,7 @@ import org.junit.jupiter.api.Test;
 
 class IpValidateTests {
 	@Test
-	void ShouldReturnTrue_GivenEmptyStringParameter() {
+	void ShouldReturnFalse_GivenEmptyStringParameter() {
 		IpValidate validator = new IpValidate();
 		assertFalse(validator.ValidateIpv4Address(""));
 	}
@@ -40,5 +40,11 @@ class IpValidateTests {
 		assertFalse(validator.ValidateIpv4Address("1.2.300.4"));
 		assertFalse(validator.ValidateIpv4Address("1.256.3.4"));
 		assertFalse(validator.ValidateIpv4Address("312.2.3.4"));
+	}
+	
+	@Test
+	void ShouldBe_False_GivenIPstartingWithZero() {
+		IpValidate validator= new IpValidate();
+		assertTrue(validator.ValidateIpv4Address("0.2.3.4"));
 	}
 }
